@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ox6-um-hri">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Channels Controller-->
+        <scene sceneID="6jn-u3-rgo">
+            <objects>
+                <viewController storyboardIdentifier="ChatChannelsController" id="ox6-um-hri" customClass="ChatChannelsController" customModule="Tekram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WJR-qm-Z6h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiY-iz-n2z" customClass="EmptyView" customModule="Tekram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-fW-CRj">
+                                        <rect key="frame" x="52" y="110" width="310" height="79.5"/>
+                                        <string key="text">Currently You don’t have any Spaces.
+If you want to Host a Space Please click on 
+“Host a Space” </string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" name="AppTitleColor#333333"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="e3a-fW-CRj" firstAttribute="top" secondItem="PiY-iz-n2z" secondAttribute="top" constant="110" id="Jg3-XK-agJ"/>
+                                    <constraint firstItem="e3a-fW-CRj" firstAttribute="centerX" secondItem="PiY-iz-n2z" secondAttribute="centerX" id="SzT-rn-T1B"/>
+                                    <constraint firstAttribute="trailing" secondItem="e3a-fW-CRj" secondAttribute="trailing" constant="52" id="o6N-Q0-J4C"/>
+                                    <constraint firstItem="e3a-fW-CRj" firstAttribute="leading" secondItem="PiY-iz-n2z" secondAttribute="leading" constant="52" id="tZv-SJ-2Ik"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="lblTitle" destination="e3a-fW-CRj" id="kRq-DN-YoL"/>
+                                </connections>
+                            </view>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-oz-TPp">
+                                <rect key="frame" x="18" y="0.0" width="378" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PiY-iz-n2z" firstAttribute="leading" secondItem="GPf-sA-Z0P" secondAttribute="leading" id="0sO-mh-1hz"/>
+                            <constraint firstItem="4KN-oz-TPp" firstAttribute="top" secondItem="WJR-qm-Z6h" secondAttribute="top" id="4uq-bU-oLl"/>
+                            <constraint firstItem="PiY-iz-n2z" firstAttribute="top" secondItem="GPf-sA-Z0P" secondAttribute="top" id="6lH-no-tKM"/>
+                            <constraint firstItem="GPf-sA-Z0P" firstAttribute="trailing" secondItem="4KN-oz-TPp" secondAttribute="trailing" constant="18" id="Dvq-SL-K2B"/>
+                            <constraint firstItem="GPf-sA-Z0P" firstAttribute="bottom" secondItem="PiY-iz-n2z" secondAttribute="bottom" id="ajY-kJ-fjB"/>
+                            <constraint firstItem="GPf-sA-Z0P" firstAttribute="trailing" secondItem="PiY-iz-n2z" secondAttribute="trailing" id="enZ-oI-5ZO"/>
+                            <constraint firstAttribute="bottom" secondItem="4KN-oz-TPp" secondAttribute="bottom" id="iKS-SE-rws"/>
+                            <constraint firstItem="4KN-oz-TPp" firstAttribute="leading" secondItem="GPf-sA-Z0P" secondAttribute="leading" constant="18" id="mZh-uF-iTL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GPf-sA-Z0P"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iS6-mo-6A3"/>
+                    <connections>
+                        <outlet property="emptyView" destination="PiY-iz-n2z" id="hMs-H4-Jht"/>
+                        <outlet property="tableView" destination="4KN-oz-TPp" id="YZa-3z-OTW"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="OpenChat" id="k3r-me-2a7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dw2-ef-JCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="96"/>
+        </scene>
+        <!--App Chat View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AppChatViewController" id="BYZ-38-t0r" customClass="AppChatViewController" customModule="Tekram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rGY-wO-I1q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZdP-C9-lN3">
+            <objects>
+                <navigationController storyboardIdentifier="NCChatChannelsController" automaticallyAdjustsScrollViewInsets="NO" id="HM9-jv-M3s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="88t-Ex-kb4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AppGreenColor#9CCD8C"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ox6-um-hri" kind="relationship" relationship="rootViewController" id="hAL-SL-itd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2A-V7-W0M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="war-em-dAz">
+            <objects>
+                <navigationController storyboardIdentifier="NCAppChatViewController" automaticallyAdjustsScrollViewInsets="NO" id="VZG-AR-ywu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="NyI-2V-enq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="ButtonPurpleColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="A9h-1b-7ce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KzQ-5h-cZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="96"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k3r-me-2a7"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <namedColor name="AppGreenColor#9CCD8C">
+            <color red="0.61176470588235299" green="0.80392156862745101" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppTitleColor#333333">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonPurpleColor">
+            <color red="0.41960784313725491" green="0.21568627450980393" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
